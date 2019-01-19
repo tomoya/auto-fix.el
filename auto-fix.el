@@ -61,6 +61,11 @@ a `before-save-hook'."
           (const :tag "None" nil))
   :group 'auto-fix)
 
+(defcustom auto-fix-mode-hook nil
+  "Hook called by `auto-fix-mode'."
+  :type 'hook
+  :group 'auto-fix)
+
 (defvar-local auto-fix-command nil
   "Set auto-fix command.")
 
