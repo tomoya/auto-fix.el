@@ -70,6 +70,17 @@ Default is `--fix`")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; Define mode
+
+;;;###autoload
+(define-minor-mode auto-fix-mode
+  "Toggle auto-fix-mode."
+  :lighter    " Auto-Fix"
+  :init-value nil
+  :group      'auto-fix)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; User commands
 
 (defun auto-fix ()
