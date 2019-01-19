@@ -83,6 +83,16 @@ Default is `--fix`")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; User commands
 
+;;;###autoload
+(defun auto-fix-before-save ()
+  "Add this to .emacs to run gofmt on the current buffer when saving:
+\(add-hook 'before-save-hook 'auto-fix-before-save)."
+  (interactive)
+  (when auto-fix-mode
+    (if auto-fix-command
+        (auto-fix)
+      (message "`auto-fix-command' is nil. please set `auto-fix-command' first."))))
+
 (defun auto-fix ()
   "Format the current buffer according to the formatting tool.
 The tool used can be set via ‘auto-fix-command` and additional
