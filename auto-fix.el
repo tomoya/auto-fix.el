@@ -40,6 +40,34 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; User Variables:
+
+(defgroup auto-fix nil
+  "Fix current buffer using linter and etc."
+  :prefix "auto-fix-"
+  :group 'tools)
+
+(defcustom auto-fix-show-errors 'buffer
+  "Where to display auto fix error output.
+It can either be displayed in its own buffer, in the echo area, or not at all.
+Please note that Emacs outputs to the echo area when writing
+files and will overwrite auto fix's echo output if used from inside
+a `before-save-hook'."
+  :type '(choice
+          (const :tag "Own buffer" buffer)
+          (const :tag "Echo area" echo)
+          (const :tag "None" nil))
+  :group 'auto-fix)
+
+(defvar-local auto-fix-command nil
+  "Set auto-fix command.")
+
+(defvar-local auto-fix-option "--fix"
+  "Set fix option string.
+Default is `--fix`")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (provide 'auto-fix)
 
