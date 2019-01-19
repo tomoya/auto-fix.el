@@ -1,4 +1,4 @@
-;;; auto-fix.el --- minor mode to fix current buffer using linter and etc -*- lexical-binding: t -*-
+;;; auto-fix.el --- Fix current buffer automatically -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2019 tomoya.
 
@@ -31,8 +31,7 @@
 ;; Introduction
 ;; ------------
 ;;
-;; This package is a minor mode to fix current buffer using linter
-;; and etc.
+;; This package is a minor mode to fix current buffer automatically.
 ;;
 ;; Setup
 ;; -----
@@ -59,7 +58,7 @@
 ;;;; User Variables:
 
 (defgroup auto-fix nil
-  "Fix current buffer using linter and etc."
+  "Fix current buffer automatically."
   :prefix "auto-fix-"
   :group 'tools)
 
