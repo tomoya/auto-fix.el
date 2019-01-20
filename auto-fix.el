@@ -69,7 +69,8 @@
 ;; Variables
 ;; ---------
 ;;
-;; This package have 2 important buffer local variables.
+;; This package have 2 important buffer local variables `auto-fix-command'
+;; and `auto-fix-option'.
 ;; Please let you set using the hook.
 ;;
 ;; * `auto-fix-command'
@@ -81,6 +82,12 @@
 ;;
 ;; This is the option string to fix for the command.
 ;; Default value is `--fix`.
+;;
+;;
+;; * `auto-fix-temp-file-prefix'
+;;
+;; This is the prefix for temprary file.
+;; Default value is `auto_fix_`.
 ;;
 ;; Setup
 ;; -----
