@@ -212,10 +212,11 @@ arguments can be set as a list via ‘auto-fix-option`."
 
 (defun auto-fix--make-temp-file ()
   "Create temporary file at same directory for creating patch."
-  (let ((temporary-file-directory default-directory)
-        (prefix "auto-fix-")
+  (let ((prefix "auto-fix-")
+        (basename (file-name-base buffer-file-name))
         (suffix (concat "." (file-name-extension buffer-file-name))))
-    (make-temp-file prefix nil suffix)))
+    (make-empty-file (concat prefix basename suffix)) ; return nil
+    (concat default-directory prefix basename suffix)))
 
 (defun auto-fix--delete-whole-line (&optional arg)
   "Delete the current line without putting it in the `kill-ring'.
