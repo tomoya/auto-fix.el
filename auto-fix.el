@@ -65,6 +65,23 @@
 ;;
 ;; This package is a minor mode to fix current buffer automatically.
 ;;
+;;
+;; Variables
+;; ---------
+;;
+;; This package have 2 important buffer local variables.
+;; Please let you set using the hook.
+;;
+;; * `auto-fix-command'
+;;
+;; This is the command to fix code.
+;; Default value is `nil`.
+;;
+;; * `auto-fix-option'
+;;
+;; This is the option string to fix for the command.
+;; Default value is `--fix`.
+;;
 ;; Setup
 ;; -----
 ;;

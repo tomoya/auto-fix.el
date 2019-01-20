@@ -4,6 +4,18 @@ Fix current buffer automatically
 
 ![Capture](https://raw.githubusercontent.com/tomoya/auto-fix/master/images/capture_20190120131817.gif)
 
+## Variables
+
+This package have 2 important buffer local variables. Please let you set using the hook.
+
+### auto-fix-command
+
+This is the command to fix code. Default value is `nil`.
+
+### auto-fix-option
+
+This is the option string to fix for the command. Default value is `--fix`.
+
 ## Setup
 
 To enable auto-fix before saving add the following to your init file:
