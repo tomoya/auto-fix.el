@@ -128,6 +128,9 @@ a `before-save-hook'."
   :type 'hook
   :group 'auto-fix)
 
+(defvar-local auto-fix-temp-file-prefix "auto_fix_"
+  "Temp file name prefix.")
+
 (defvar-local auto-fix-command nil
   "Set auto-fix command.")
 
@@ -212,11 +215,10 @@ arguments can be set as a list via ‘auto-fix-option`."
 
 (defun auto-fix--make-temp-file ()
   "Create temporary file at same directory for creating patch."
-  (let ((prefix "auto-fix-")
-        (basename (file-name-base buffer-file-name))
+  (let ((basename (file-name-base buffer-file-name))
         (suffix (concat "." (file-name-extension buffer-file-name))))
-    (make-empty-file (concat prefix basename suffix)) ; return nil
-    (concat default-directory prefix basename suffix)))
+    (make-empty-file (concat auto-fix-temp-file-prefix basename suffix)) ; return nil
+    (concat default-directory auto-fix-temp-file-prefix basename suffix)))
 
 (defun auto-fix--delete-whole-line (&optional arg)
   "Delete the current line without putting it in the `kill-ring'.
