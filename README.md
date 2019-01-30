@@ -2,7 +2,7 @@
 
 Fix current buffer automatically
 
-![Capture](https://raw.githubusercontent.com/tomoya/auto-fix/master/images/capture_20190120131817.gif)
+![Capture](https://raw.githubusercontent.com/tomoya/auto-fix.el/master/images/capture_20190120131817.gif)
 
 ## Variables
 
