@@ -6,7 +6,7 @@
 ;; Maintainer: Tomoya Otake <tomoya.ton@gmail.com>
 ;; Keywords: linter, languages, tools
 ;; Version: 1.0.0
-;; X-URL: https://github.com/tomoya/auto-fix.el/
+;; URL: https://github.com/tomoya/auto-fix.el/
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; This file is not part of GNU Emacs.
